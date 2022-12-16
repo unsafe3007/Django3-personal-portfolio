@@ -127,3 +127,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/' # MEDIA_URL - задает адрес откуда будут прикреплятся изображения к тем или иным проектам
 MEDIA_ROOT = BASE_DIR / 'media' # MEDIA_ROOT определяет место сохранения всех наших медиа файлов
+
+try:
+    from .local_settings import *
+except ImportError:
+    print('Looks loke no local file. You must be on production')
