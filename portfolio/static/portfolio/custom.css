@@ -1,0 +1,50 @@
+h1.headline {
+    text-align: center;
+    font-family: 'Roboto Slab'
+}
+
+h2.center {
+    text-align: center;
+    font-family: 'Roboto Slab'
+}
+
+.img-fluid {
+    width: 195px;
+    height: 120px;
+}
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 290px;
+    height: 290px;
+    border-radius: 110px;
+    box-shadow: 10px;
+}
+
+
+.navbar-nav .nav-link {
+    color: green !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: green !important;
+}
+
+body {
+    font-family: 'Roboto Slab';
+}
+
+#blogtitle {
+    font-size: 6rem;
+}
+
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 4rem;
+    }
+    #blogdetailtitle {
+        font-size: 5rem;
+    }
+}

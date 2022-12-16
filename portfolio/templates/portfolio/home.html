@@ -1,0 +1,44 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}  <!--Во всех случаях, когда используем статические файлы-->
+
+{% block content %}
+
+
+
+    <img class="displayed" src="{% static 'portfolio/photo3.jpg' %}">
+    <h1 class="headline">My first web-page</h1>
+    <hr>
+
+    <h2 class="center">Portfolio</h2>
+    <hr>
+    <div class="row">
+      {% for project in projects %}
+      <div class="col-lg-2 col-md-4">
+
+        {% if project.url %}
+        <a href="{{ project.url }}" target="_blank">
+          <img src="{{ project.image.url }}" class="" height="120" width="195">
+        </a>
+        {% else %}
+        <img src="{{ project.image.url }}" class="img-fluid mb-2" height="110" width="195">
+        {% endif %}
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+
+      </div>
+      {% endfor %}
+    </div>
+
+    {% endblock %}
+
+
+
+
+
+
+
+
+<!-- В случаях где мы задаём логические связи между кодом и шаблонами используем такую конструкцию(фигурные скобки
+ и знак процента-->
+<!-- Если работаем со словарём, то двойные фигурные скобки - -->
